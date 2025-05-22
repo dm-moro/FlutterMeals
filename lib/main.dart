@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'screens/tabs_screen.dart';
 import 'package:meals/screens/categories_meals_screen.dart';
 import 'package:meals/screens/categories_screen.dart';
 import 'package:meals/screens/meal_detail_screen.dart';
@@ -31,10 +32,31 @@ class MyApp extends StatelessWidget {
         ),
       ),
       routes: {
-        AppRoutes.HOME: (ctx) => CategoriesScreen(),
+        AppRoutes.HOME: (ctx) => TabsScreen(),
         AppRoutes.CATEGORIES_MEALS: (ctx) => CategoriesMealsScreen(),
         AppRoutes.MEAL_DETAIL: (ctx) => MealDetailScreen(),
+        // AppRoutes.FAVORITES_MEALS: (ctx) => TabsScreen();
       },
+      // onGenerateRoute: (settings) {
+      //   if(settings.name == 'alguma-rota') {
+      //     return null;
+      //   } else if (settings.name == 'outra-rota') {
+      //     return null;
+      //   } else {
+      //     return MaterialPageRoute(
+      //       builder: (_) {
+      //         return CategoriesScreen(); // home
+      //       }
+      //     );
+      //   }
+      // },
+      // onUnknownRoute: (settings) {
+      //   return MaterialPageRoute(
+      //     builder: (_) {
+      //       return CategoriesMealsScreen(); // home // colocar uma mensagem de erro 404 NOT FOUND
+      //     }
+      //   );
+      // },
     );
   }
 }
